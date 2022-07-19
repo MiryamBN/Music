@@ -5,10 +5,6 @@ import Songs from "../classcs/Songs";
 export function GetAllSongs(song:Song[]) {
   return { type: "GET_ALL_SONGS", payload:song };
 }
-// export function SaveChanges(song:Songs) {
-//   debugger
-//   return { type: "SAVE_CHANGES", payload: song };
-// }
 export function DeleteSong(id: string ) {
   debugger;
   return { type: "DELETE_SONG", payload: id };

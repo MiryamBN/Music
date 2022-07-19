@@ -52,23 +52,6 @@ export const middlewareSongFunctionEditSongApi:any = (song: Song) => {
   };
 };
 
-// export const middlewareSongFunctionAddSongApi = (song: Song) => {
-//     debugger
-//     return async (dispatch: any) => {
-//         try {
-
-//             const res = await axios.post('localhost:8080/songs/AddSong', song, {
-//                 headers: {
-//                     'Content-Type': 'application/json',
-//                     Accept: 'application/json',
-//                 },
-//             });
-//             dispatch(AddSong(res.data));
-//         }
-//         catch (err) {
-//             return err;
-//         }
-//     }
 
 export const middlewareSongFunctionGetByArtistApi:any = (nameOfArtist: string) => {
   debugger
@@ -84,27 +67,6 @@ export const middlewareSongFunctionGetByArtistApi:any = (nameOfArtist: string) =
     };
   };
 
-// export const middlewareSongFunctionAddSongApi = (song: Song) => {
-//   debugger;
-//   return async (dispatch: any) => {
-//     try {
-//       const res = await axios.post(`http://localhost:8080/songs/AddSong`, song, {
-//         headers: {
-//           "Content-Type": "application/json",
-//           Accept: "application/json",
-//         },
-//       });
-//       debugger;
-//       console.log("nn");
-//       dispatch(AddSong(res.data));
-//     } catch (err) {
-//       return err;
-//     }
-
-//     debugger;
-//   };
- 
-// };
 
 export const middlewareSongFunctionAddSongApi = (newSong: Song) => {
   return async (dispatch: any) => {

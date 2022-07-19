@@ -1,12 +1,26 @@
-import { Link } from "react-router-dom";
+import { IconButton } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
 
 export default function BackButton() {
+    const navigate = useNavigate();
     return (
       <>
-      <main style={{ padding: "1rem 0" }}>
-            <h2>BackButton</h2>
-        </main>
-        <Link to="/myAddSong"></Link>
+      <IconButton
+      size="large"
+      sx={{
+        background: "rgb(206, 8, 58)",
+        ":hover": { background: "rgb(53 44 173)" },
+      }}
+      onClick={() => {
+        {
+          navigate("/");
+        }
+      }}
+    >
+      <ArrowForwardIcon />
+    </IconButton>
     </>
     )
 }

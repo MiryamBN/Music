@@ -3,18 +3,9 @@ import { eGener } from "../../classcs/eGener.enum";
 import Song from "../../classcs/Song.class";
 import Songs from "../../classcs/Songs";
 
-// export interface songInterface {
-//   songsList:Song[];
-// }
 
 const initialState:Songs = {
   songsList: [], 
-  // [
-  //   new Song("3", "c", "cc", eGener.CLASSICAL, 3, 3),
-  //   new Song("4", "d", "dd", eGener.ROCK, 4, 4),
-  //   new Song("5", "e", "ee", eGener.ROCK, 5, 5),
-  //   new Song("6", "f", "ff", eGener.RAP, 8, 8),
-  // ],
 }
 type Action = 
   | { type: "GET_ALL_SONGS"; payload:Song[]  }
@@ -28,9 +19,7 @@ export const songReducer = (state = initialState, action: {type: string,payload:
   debugger;
   switch (action.type) {
     case "GET_ALL_SONGS":
-      // return { ...state, songsList: [...action.payload] }
-      return { songsList: action.payload }
-
+      return { ...state, songsList: [...action.payload] }
       break;
     case "SAVE_CHANGES":
       return { ...state, songsList: action.payload };

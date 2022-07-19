@@ -1,21 +1,11 @@
-import {
-  IconButton,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableRow,
-} from "@mui/material";
+import { IconButton, TableCell, TableRow } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { useState } from "react";
-import Song from "../../classcs/Song.class";
 import { useNavigate } from "react-router-dom";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 
-
 function SingleSong(props: any) {
   let song = props.song;
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   return (
     <>
@@ -45,9 +35,10 @@ function SingleSong(props: any) {
             ":hover": { background: "rgb(53 44 173)" },
           }}
           onClick={() => {
-            const path = `/myEditSong/`+song.id;
+            const path = `/myEditSong/` + song.id;
             navigate(path);
-          }}>
+          }}
+        >
           <BorderColorIcon />
         </IconButton>
       </TableRow>

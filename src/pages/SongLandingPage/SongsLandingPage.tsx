@@ -46,7 +46,6 @@ function SongLandingPage(props: any) {
           <div className="p-inputgroup">
 
             <InputText placeholder="search by artist" onChange={(e) => {setArtist(e.target.value)}} />
-            {/* לשלוח לפונקציה של השליפה לפי ארטיסט עם הפרופס */}
             <Button icon="pi pi-search" className="p-button-warning" onClick={()=>{props.searchByArtist(artist)}}/>
           </div>
         </div>

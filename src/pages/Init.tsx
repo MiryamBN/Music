@@ -17,7 +17,6 @@ import SongLandingPage from "./SongLandingPage/SongsLandingPage";
 function Init() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  // const [songs, setSongs] = useState(new Array<Song>);
 
   useEffect(() => {
     debugger;
@@ -25,7 +24,7 @@ function Init() {
   }, []);
 
   const listSong = useSelector(
-    (state: any) => state.songReducer.songsList
+    (state: RootState) => state.songReducer.songsList
   );
   debugger;
 
@@ -60,7 +59,6 @@ function Init() {
               ></SongLandingPage>
             }
           />
-          {/* <Route path="/songs/new" element={<AddSongPage songs={listSong} addSong={addSong}></AddSongPage>} />  */}
           <Route path="/myAddSongPage" element={<AddSongPage songs={listSong} addSong={addSong}></AddSongPage>}/>
 
           <Route
@@ -71,10 +69,7 @@ function Init() {
           />
         </Route>
       </Routes>
-      {/* <button onClick={() => { navigate('/') }}>home</button>
-      <button onClick={() => { navigate('/songs') }}>view all</button>
-      <button onClick={() => { navigate('/songs/myAddSongPage') }}>add</button>
-      <button onClick={() => { navigate('/songs/edit/:id') }}>edit</button> */}
+      
     </>
   );
 }

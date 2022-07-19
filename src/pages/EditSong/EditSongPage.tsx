@@ -14,10 +14,11 @@ import { eGener } from "../../classcs/eGener.enum";
 import type {} from 'redux-thunk/extend-redux'
 import { middlewareSongFunctionEditSongApi } from "../../Api/SongsApi";
 import { Button } from "primereact/button";
+import Select from "@mui/material/Select";
+import { MenuItem } from "@mui/material";
 
 const EditSongPage = (props:any) => {
   debugger;
-  // export default function EditSongPage() {
   const params = useParams();
   const navigate = useNavigate();
   let songs = props.songs;
@@ -32,7 +33,6 @@ const EditSongPage = (props:any) => {
     price: 0,
     }
   );
-  // const [song, setSong] = useState(new Song("", "", eGener.POP, 0, 0));
   const genreArr = ["POP", "ROCK", "CLASSICAL", "RAP"];
 
   function editSong(song: Song): void {
@@ -73,16 +73,10 @@ const EditSongPage = (props:any) => {
               }}
             />
           </div>
-          {/* <div className="field col-12 md:col-3">
-                        <label htmlFor="money">Gener</label>
-                        <InputText  id="money" keyfilter="money" defaultValue={params.gener} onChange={(e) => {
-            setNewSong({ ...newSong, gener: String(e.target.value) });
-          }}/>
-                    </div> */}
           <br></br>
           <br></br>
           <br></br>
-          {/* <Select
+          <Select
             style={{ width: "10%", height: "10%", marginTop: "2%" }}
             labelId="demo-simple-select-filled-label"
             sx={{
@@ -106,7 +100,7 @@ const EditSongPage = (props:any) => {
                 </MenuItem>
               );
             })}
-          </Select> */}
+          </Select>
           <div className="field col-12 md:col-3">
             <label htmlFor="integer">Price</label>
             <InputText
